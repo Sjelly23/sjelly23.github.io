@@ -17,11 +17,16 @@ function getClickPower(clickPowerToGet){
     clickPower += clickPowerToGet;
 }
 
+function refreshPrices(){
+    document.getElementById("clickPower").innerHTML = "Get Clickpower (costs " + String(clickPowerCostIncremental[0]) + " moneyz)"
+}
+
 function buyThing(incrementalCost, callback){
     if(moneyz >= incrementalCost[0]){
         modifyMoneyz(-incrementalCost[0]);
         incrementalCost[0] *= incrementalCost[1];
         callback();
+        refreshPrices();
     }
 }
 
