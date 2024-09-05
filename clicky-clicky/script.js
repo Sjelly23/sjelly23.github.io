@@ -9,7 +9,7 @@ function updateScoreCounter(){
 }
 
 function modifyMoneyz(moneyzToGet){
-    moneyz = praseFloat((moneyz + moneyzToGet).toFixed(1));
+    moneyz = parseFloat((moneyz + moneyzToGet).toFixed(1));
     updateScoreCounter();
 }
 
