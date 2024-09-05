@@ -23,8 +23,8 @@ function refreshPrices(){
 
 function buyThing(incrementalCost, callback){
     if(moneyz >= incrementalCost[0]){
-        incrementalCost[0] = (incrementalCost[0] * incrementalCost[1]).toFixed(1);
         modifyMoneyz(-incrementalCost[0]);
+        incrementalCost[0] = (incrementalCost[0] * incrementalCost[1]).toFixed(1);
         callback();
         refreshPrices();
     }
