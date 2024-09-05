@@ -2,7 +2,7 @@
 let moneyz = 0;
 let scoreCounter = document.getElementById("scoreCounter");
 let clickPower = 1;
-let clickPowerCostIncremental = [5, 1.4];
+let clickPowerCostIncremental = [5, 1.3];
 
 function updateScoreCounter(){
     scoreCounter.innerHTML = "score: " + String(moneyz);
