@@ -12,6 +12,16 @@ function getMoneyz(moneyzToGet){
     updateScoreCounter();
 }
 
+function getClickPower(clickPowerToGet){
+    clickPower += clickPowerToGet;
+}
+
+function buyThing(cost, callback){
+    if(moneyz >= cost){
+        callback();
+    }
+}
+
 function init(){
     updateScoreCounter();
 }
