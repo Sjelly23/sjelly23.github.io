@@ -1,12 +1,29 @@
 <html>
-    <head>
-        <title>Clicky Clicky</title>
-    </head>
-    <body>
-        <p id="scoreCounter">score: wip</p>
-        <br>
-        <button onclick="modifyMoneyz(clickPower)">Get MONEYZ</button>
-        <button id="clickPower" onclick="buyThing(clickPowerCostIncremental, () => {getClickPower(1);})">Get Clickpower (costs 5 moneyz)</button>
-        <script src="script.js"></script>
-    </body>
+
+<head>
+    <title>Clicky Clicky</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+            {
+                "imports": {
+                    "@material/web/": "https://esm.run/@material/web/"
+                }
+            }
+  </script>
+    <script type="module">
+        import '@material/web/all.js';
+        import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
+
+        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
+</head>
+
+<body>
+    <p id="scoreCounter" class="md-typescale-body-medium">score: JS no workie D:</p>
+    <br>
+    <md-filled-button onclick="modifyMoneyz(clickPower)">Get MONEYZ</button>
+    <md-filled-button id="clickPower" onclick="buyThing(clickPowerCostIncremental, () => {getClickPower(1);})">Get Clickpower (costs 5 moneyz)</button>
+    <script src="script.js"></script>
+</body>
+
 </html>
