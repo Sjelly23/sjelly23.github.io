@@ -7,7 +7,7 @@ function updateScoreCounter(){
     scoreCounter.innerHTML = "score: " + String(moneyz);
 }
 
-function getMoneyz(moneyzToGet){
+function modifyMoneyz(moneyzToGet){
     moneyz += moneyzToGet;
     updateScoreCounter();
 }
@@ -18,6 +18,7 @@ function getClickPower(clickPowerToGet){
 
 function buyThing(cost, callback){
     if(moneyz >= cost){
+        modifyMoneyz(-cost);
         callback();
     }
 }
