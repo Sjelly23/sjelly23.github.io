@@ -9,7 +9,7 @@ function updateScoreCounter(){
 }
 
 function modifyMoneyz(moneyzToGet){
-    moneyz += moneyzToGet;
+    moneyz = (moneyz + moneyzToGet).toFixed(1);
     updateScoreCounter();
 }
 
